@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" maxHeight="414.0" maxWidth="310.0" minHeight="414.0" minWidth="310.0" onMouseDragged="#handlePrsunOknaAction" onMousePressed="#handlePrsunOknaNacteniAction" prefHeight="414.0" prefWidth="310.0" style="-fx-background-color: #5a73e3;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mise.FXMLNastaveniController">
+   <children>
+      <VBox alignment="CENTER" layoutX="92.0" layoutY="30.0" prefHeight="310.0" prefWidth="310.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <StackPane alignment="TOP_RIGHT" prefHeight="34.0" prefWidth="310.0">
+               <children>
+                  <JFXButton onAction="#handlexButtonAction" opacity="0.52" prefHeight="25.0" prefWidth="29.0" style="-fx-background-color: #0b1386;" text="X" textFill="WHITE" fx:id="xButton">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets right="5.0" top="1.0" />
+                     </StackPane.margin>
+                     <effect>
+                        <DropShadow color="#00000080" height="30.0" offsetX="5.0" offsetY="5.0" radius="14.5" width="30.0" />
+                     </effect>
+                  </JFXButton>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="331.0" prefWidth="310.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0b1386" height="319.0" opacity="0.55" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="280.0">
+                     <effect>
+                        <DropShadow blurType="TWO_PASS_BOX" color="#0000006e" height="15.0" offsetX="10.0" offsetY="10.0" radius="7.0" width="15.0" />
+                     </effect>
+                  </Rectangle>
+                  <GridPane alignment="CENTER_LEFT" prefHeight="331.0" prefWidth="173.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="ALWAYS" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="ALWAYS" prefWidth="80.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="60.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="60.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="60.0" />
+                      <RowConstraints minHeight="10.0" prefHeight="60.0" />
+                      <RowConstraints minHeight="10.0" prefHeight="60.0" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Název mise:" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Začátek mise:" textFill="WHITE" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Konec mise:" textFill="WHITE" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Výplata [Kč/den]:" textFill="WHITE" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nazevMiseTextField" promptText="Zadej název" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <DatePicker fx:id="zacatekMiseDatePicker" promptText="dd.mm.yyyy" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </DatePicker>
+                        <DatePicker fx:id="konecMiseDatePicker" promptText="dd.mm.yyyy" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </DatePicker>
+                        <TextField fx:id="vyplataTextField" promptText="Zadej denní výplatu" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                     </children>
+                     <StackPane.margin>
+                        <Insets left="25.0" right="20.0" />
+                     </StackPane.margin>
+                  </GridPane>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </StackPane>
+            <StackPane prefHeight="49.0" prefWidth="310.0">
+               <children>
+                  <JFXButton fx:id="okButton" onAction="#handleOkButtonAction" prefHeight="38.0" prefWidth="66.0" style="-fx-background-color: #0b1386;" text="OK" textFill="WHITE">
+                     <effect>
+                        <DropShadow color="#00000092" height="30.0" offsetX="5.0" offsetY="5.0" radius="14.5" width="30.0" />
+                     </effect>
+                  </JFXButton>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

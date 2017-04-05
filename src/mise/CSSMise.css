@@ -1,0 +1,27 @@
+.jfx-hamburger StackPane {
+    -fx-background-color: #5a73e3;
+}
+#AnchorPane {
+    -fx-background-color: #5a73e3;
+}
+.button {
+    -fx-background-color: #5a73e3;
+    -fx-background-radius: 0,0,0;
+    
+}
+.button:hover {
+    -fx-background-color: #0b1386;
+}
+.progress-indicator {
+    -fx-progress-color: #33f000;
+
+}
+.progress-indicator .indicator {
+    -fx-background-color:#ba0000;
+}
+.progress-indicator .percentage {
+    -fx-fill: null;
+}
+.progress-indicator . {
+
+}

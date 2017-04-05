@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="98.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXButton accessibleText="Nastaveni" prefHeight="40.0" prefWidth="125.0" text="Nastavení" textAlignment="CENTER" textFill="WHITE" />
+      <JFXButton accessibleText="Info" prefHeight="40.0" prefWidth="125.0" text="Info" textAlignment="CENTER" textFill="WHITE" />
+      <JFXButton accessibleText="Exit" prefHeight="40.0" prefWidth="125.0" text="Exit" textAlignment="CENTER" textFill="WHITE" />
+   </children>
+</VBox>

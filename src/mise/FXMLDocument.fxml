@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" minHeight="390.0" minWidth="700.0" onMouseDragged="#handlePrsunOknaAction" onMousePressed="#handlePrsunOknaNacteniAction" prefHeight="442.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mise.FXMLDocumentController">
+   <effect>
+      <DropShadow blurType="ONE_PASS_BOX" height="35.82" offsetX="5.0" offsetY="5.0" radius="16.67" spread="0.05" width="32.86" />
+   </effect>
+   <children>
+      <StackPane layoutX="-2.0" layoutY="-45.0" prefHeight="400.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="473.0" prefWidth="700.0">
+               <children>
+                  <StackPane alignment="TOP_RIGHT" prefHeight="27.0" prefWidth="700.0">
+                     <children>
+                        <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <JFXButton fx:id="minimizeButton" onAction="#handleMinimizeButtonAction" opacity="0.46" prefHeight="25.0" prefWidth="29.0" ripplerFill="#b1b5eb" style="-fx-background-color: #0b1386;" text="\\u2014" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#00000080" height="30.0" offsetX="5.0" offsetY="5.0" radius="14.5" width="30.0" />
+                                 </effect>
+                                 <HBox.margin>
+                                    <Insets right="5.0" top="1.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton onAction="#handlexButtonAction" opacity="0.46" prefHeight="25.0" prefWidth="29.0" ripplerFill="#b1b5eb" style="-fx-background-color: #0b1386;" text="X" textFill="WHITE" fx:id="xButton">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#00000080" height="30.0" offsetX="5.0" offsetY="5.0" radius="14.5" width="30.0" />
+                                 </effect>
+                                 <HBox.margin>
+                                    <Insets right="5.0" top="1.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </StackPane>
+                  <StackPane>
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0b1386" height="62.0" opacity="0.55" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="655.0">
+                           <effect>
+                              <DropShadow blurType="TWO_PASS_BOX" color="#0000006e" height="15.0" offsetX="10.0" offsetY="10.0" radius="7.0" width="15.0" />
+                           </effect>
+                        </Rectangle>
+                        <Label fx:id="nazevMiseLabel" alignment="CENTER" minHeight="48.0" text="NÁZEV MISE" textAlignment="CENTER" textFill="#ffc300">
+                           <font>
+                              <Font name="Arial Black" size="27.0" />
+                           </font>
+                           <effect>
+                              <DropShadow color="#00000088" height="20.0" offsetX="10.0" offsetY="10.0" radius="9.5" width="20.0" />
+                           </effect>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                     </padding>
+                  </StackPane>
+                  <StackPane prefHeight="60.0" prefWidth="755.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0b1386" height="38.0" opacity="0.55" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="655.0">
+                           <effect>
+                              <DropShadow blurType="TWO_PASS_BOX" color="#0000006e" height="15.0" offsetX="10.0" offsetY="10.0" radius="7.0" width="15.0" />
+                           </effect>
+                        </Rectangle>
+                        <GridPane alignment="CENTER" prefHeight="40.0" prefWidth="714.0">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="CENTER" hgrow="NEVER" minWidth="150.0" />
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                            <ColumnConstraints />
+                              <ColumnConstraints halignment="CENTER" hgrow="NEVER" minWidth="150.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="NEVER" minWidth="150.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="NEVER" minWidth="150.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="NEVER" prefWidth="50.0" />
+                          </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Začátek mise:" textFill="#ffc300">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#00000088" height="20.0" offsetX="10.0" offsetY="10.0" radius="9.5" width="20.0" />
+                                 </effect>
+                              </Label>
+                              <Label fx:id="zacatekMiseLabel" text="dd. mm. rrrr" textFill="#ff0009" GridPane.columnIndex="4">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#00000088" height="20.0" offsetX="10.0" offsetY="10.0" radius="9.5" width="20.0" />
+                                 </effect>
+                              </Label>
+                              <Label text="Konec mise:" textFill="#ffc300" GridPane.columnIndex="5">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#00000088" height="20.0" offsetX="10.0" offsetY="10.0" radius="9.5" width="20.0" />
+                                 </effect>
+                              </Label>
+                              <Label fx:id="konecMiseLabel" text="dd. mm. rrrr" textFill="#02c302" GridPane.columnIndex="6">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#00000088" height="20.0" offsetX="10.0" offsetY="10.0" radius="9.5" width="20.0" />
+                                 </effect>
+                              </Label>
+                              <JFXHamburger fx:id="ham" alignment="CENTER" GridPane.columnIndex="7">
+                                 <effect>
+                                    <DropShadow height="20.0" offsetX="5.0" offsetY="5.0" radius="9.5" width="20.0" />
+                                 </effect>
+                              </JFXHamburger>
+                           </children>
+                        </GridPane>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" top="5.0" />
+                     </padding>
+                  </StackPane>
+                  <Line endX="680.0" fill="WHITE" opacity="0.45" stroke="WHITE" strokeLineCap="BUTT" strokeWidth="2.0">
+                     <effect>
+                        <DropShadow height="20.0" offsetX="5.0" offsetY="5.0" radius="9.5" width="20.0" />
+                     </effect>
+                  </Line>
+                  <HBox alignment="CENTER" minHeight="0.0" prefHeight="280.0">
+                     <children>
+                        <Pane prefHeight="276.0" prefWidth="350.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0b1386" height="237.0" layoutX="24.0" layoutY="22.0" opacity="0.55" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="274.0">
+                                 <effect>
+                                    <DropShadow blurType="TWO_PASS_BOX" color="#0000006e" height="15.0" offsetX="10.0" offsetY="10.0" radius="7.0" width="15.0" />
+                                 </effect>
+                              </Rectangle>
+                              <Line endY="255.0" fill="WHITE" layoutX="320.0" layoutY="10.0" opacity="0.45" stroke="WHITE" strokeLineCap="BUTT" strokeWidth="2.0">
+                                 <effect>
+                                    <DropShadow height="20.0" offsetX="5.0" offsetY="5.0" radius="9.5" width="20.0" />
+                                 </effect>
+                              </Line>
+                              <Circle fill="#d6c800" layoutX="161.0" layoutY="141.0" radius="100.0" stroke="#1800ff" strokeLineCap="BUTT" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0">
+                                 <effect>
+                                    <DropShadow blurType="GAUSSIAN" color="#00000056" height="30.0" offsetX="10.0" offsetY="10.0" radius="14.5" width="30.0" />
+                                 </effect>
+                              </Circle>
+                              <Arc fx:id="progress" cache="true" fill="#0b1386" layoutX="161.0" layoutY="141.0" length="220.1" radiusX="101.0" radiusY="101.0" startAngle="90.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" type="ROUND">
+                                 <effect>
+                                    <InnerShadow choke="0.17" color="#00000037" height="101.06" radius="36.6875" width="47.69" />
+                                 </effect>
+                              </Arc>
+                              <Circle fill="#1405ff" layoutX="161.0" layoutY="141.0" radius="70.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0">
+                                 <effect>
+                                    <DropShadow color="#00000069" height="16.5" offsetX="5.0" offsetY="5.0" radius="11.125" spread="0.4" width="30.0" />
+                                 </effect>
+                              </Circle>
+                              <Circle fill="#000057" layoutX="161.0" layoutY="141.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                                 <effect>
+                                    <DropShadow color="#000000b5" height="30.0" offsetX="5.0" offsetY="5.0" radius="14.5" width="30.0" />
+                                 </effect>
+                              </Circle>
+                              <Label fx:id="procentaGreenLabel" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" layoutX="119.0" layoutY="103.0" prefHeight="38.0" prefWidth="84.0" text="100%" textAlignment="CENTER" textFill="LIME">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="procentaRedLabel" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" layoutX="119.0" layoutY="130.0" prefHeight="38.0" prefWidth="84.0" text="100%" textAlignment="CENTER" textFill="RED">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="paneMenu" prefHeight="276.0" prefWidth="350.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0b1386" height="38.0" layoutX="-11.0" layoutY="21.0" opacity="0.55" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="337.0">
+                                 <effect>
+                                    <DropShadow blurType="TWO_PASS_BOX" color="#0000006e" height="15.0" offsetX="10.0" offsetY="10.0" radius="7.0" width="15.0" />
+                                 </effect>
+                              </Rectangle>
+                              <Label layoutX="-11.0" layoutY="28.0" text="Celkem:" textFill="#ffc300">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#00000088" height="20.0" offsetX="10.0" offsetY="10.0" radius="9.5" width="20.0" />
+                                 </effect>
+                                 <padding>
+                                    <Insets left="12.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="celkemDnuLabel" alignment="TOP_RIGHT" layoutX="198.0" layoutY="28.0" prefHeight="25.0" prefWidth="121.0" text="xxx" textFill="#02c302">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#00000088" height="20.0" offsetX="10.0" offsetY="10.0" radius="9.5" width="20.0" />
+                                 </effect>
+                              </Label>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0b1386" height="38.0" layoutX="-11.0" layoutY="71.0" opacity="0.55" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="337.0">
+                                 <effect>
+                                    <DropShadow blurType="TWO_PASS_BOX" color="#0000006e" height="15.0" offsetX="10.0" offsetY="10.0" radius="7.0" width="15.0" />
+                                 </effect>
+                              </Rectangle>
+                              <Label layoutX="-11.0" layoutY="76.0" text="Celková výplata:" textFill="#ffc300">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#00000088" height="20.0" offsetX="10.0" offsetY="10.0" radius="9.5" width="20.0" />
+                                 </effect>
+                                 <padding>
+                                    <Insets left="12.0" />
+                                 </padding>
+                              </Label>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0b1386" height="38.0" layoutX="-11.0" layoutY="121.0" opacity="0.55" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="337.0">
+                                 <effect>
+                                    <DropShadow blurType="TWO_PASS_BOX" color="#0000006e" height="15.0" offsetX="10.0" offsetY="10.0" radius="7.0" width="15.0" />
+                                 </effect>
+                              </Rectangle>
+                              <Label layoutX="-11.0" layoutY="126.0" text="Dosud vyděláno:" textFill="#ffc300">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#00000088" height="20.0" offsetX="10.0" offsetY="10.0" radius="9.5" width="20.0" />
+                                 </effect>
+                                 <padding>
+                                    <Insets left="12.0" />
+                                 </padding>
+                              </Label>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0b1386" height="38.0" layoutX="-11.0" layoutY="171.0" opacity="0.55" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="337.0">
+                                 <effect>
+                                    <DropShadow blurType="TWO_PASS_BOX" color="#0000006e" height="15.0" offsetX="10.0" offsetY="10.0" radius="7.0" width="15.0" />
+                                 </effect>
+                              </Rectangle>
+                              <Label layoutX="-11.0" layoutY="178.0" text="Za sebou:" textFill="#ffc300">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#00000088" height="20.0" offsetX="10.0" offsetY="10.0" radius="9.5" width="20.0" />
+                                 </effect>
+                                 <padding>
+                                    <Insets left="12.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="celkemKcLabel" alignment="TOP_RIGHT" layoutX="198.0" layoutY="78.0" prefHeight="25.0" prefWidth="121.0" text="0000000" textFill="#02c302">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#00000088" height="20.0" offsetX="10.0" offsetY="10.0" radius="9.5" width="20.0" />
+                                 </effect>
+                              </Label>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0b1386" height="38.0" layoutX="-11.0" layoutY="221.0" opacity="0.55" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="337.0">
+                                 <effect>
+                                    <DropShadow blurType="TWO_PASS_BOX" color="#0000006e" height="15.0" offsetX="10.0" offsetY="10.0" radius="7.0" width="15.0" />
+                                 </effect>
+                              </Rectangle>
+                              <Label layoutX="-11.0" layoutY="228.0" prefWidth="179.0" text="Zbývá:" textFill="#ffc300">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#00000088" height="20.0" offsetX="10.0" offsetY="10.0" radius="9.5" width="20.0" />
+                                 </effect>
+                                 <padding>
+                                    <Insets left="12.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="vydelanoLabel" alignment="CENTER_RIGHT" layoutX="198.0" layoutY="128.0" prefHeight="25.0" prefWidth="121.0" text="0000000" textAlignment="CENTER" textFill="#ff0009">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#00000088" height="20.0" offsetX="10.0" offsetY="10.0" radius="9.5" width="20.0" />
+                                 </effect>
+                              </Label>
+                              <Label fx:id="zbyvaDnuLabel" alignment="CENTER_RIGHT" layoutX="109.0" layoutY="228.0" prefHeight="25.0" prefWidth="210.0" text="xxx" textFill="#fc1515">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#00000088" height="20.0" offsetX="10.0" offsetY="10.0" radius="9.5" width="20.0" />
+                                 </effect>
+                              </Label>
+                              <Label fx:id="zaSebouDnuLabel" alignment="TOP_RIGHT" layoutX="109.0" layoutY="178.0" prefHeight="25.0" prefWidth="210.0" text="xxx" textFill="#02c302">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#00000088" height="20.0" offsetX="10.0" offsetY="10.0" radius="9.5" width="20.0" />
+                                 </effect>
+                              </Label>
+                              <JFXDrawer fx:id="menu" direction="RIGHT" layoutX="251.0" layoutY="-20.0" prefHeight="120.0" prefWidth="98.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <Line endX="680.0" fill="WHITE" opacity="0.45" stroke="WHITE" strokeLineCap="BUTT" strokeWidth="2.0">
+                     <effect>
+                        <DropShadow height="20.0" offsetX="5.0" offsetY="5.0" radius="9.5" width="20.0" />
+                     </effect>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Line>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
